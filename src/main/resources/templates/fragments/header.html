@@ -1,3 +1,4 @@
+<link th:href="@{/css/header.css}" rel="stylesheet">
 <nav class="teal lighten-2" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="/" class="brand-logo white-text">Ez Learning</a>
@@ -9,6 +10,15 @@
             </a></li>
             <li sec:authorize="isAuthenticated()"><a class="dropdown-trigger" data-target="accountdd"><i
                     class="material-icons">account_circle</i></a></li>
+            <li>
+                <select class="white-text"
+                        onchange="window.location.href='?lang=' + this.value"
+                        th:aria-label="#{select.language}"
+                        th:value="${#locale.language}">
+                    <option value="en" th:selected="${#locale.language == 'en'}" class="black-text">English</option>
+                    <option value="es" th:selected="${#locale.language == 'es'}" class="black-text">Español</option>
+                </select>
+            </li>
         </ul>
         <ul id="nav-mobile" class="sidenav teal darken-2">
             <li><a th:href="@{/cursos}" class="white-text">Cursos</a></li>

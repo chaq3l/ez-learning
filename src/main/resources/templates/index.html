@@ -14,13 +14,13 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <br><br>
-                <h1 class="header center white-text">Enseñanza continua</h1>
+                <h1 class="header center white-text" th:text="#{header.title}">Continuous Learning</h1>
                 <div class="row center">
-                    <h5 class="header col s12 light">Una plataforma de aprendizaje ideada para todos</h5>
+                    <h5 class="header col s12 light" th:text="#{header.subtitle}">A learning platform designed for everyone</h5>
                 </div>
                 <br>
                 <div class="row center">
-                    <a th:href="@{/discover}" class="waves-effect waves-light btn-large">Descúbrela</a>
+                    <a th:href="@{/discover}" class="waves-effect waves-light btn-large" th:text="#{discover.button}">Discover</a>
                 </div>
                 <br><br>
             </div>
@@ -35,35 +35,27 @@
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center teal-text text-lighten-2"><i class="material-icons">devices</i></h2>
-                        <h5 class="center">Aprende desde cualquier lugar</h5>
+                        <h5 class="center" th:text="#{features.learn.title}">Learn from anywhere</h5>
 
-                        <p class="light">Nuesta plataforma está diseñada para que puedas acceder a ella desde cualquier
-                            dispositivo,
-                            brindándote las herramientas necesarias para tu aprendizaje desde donde sea que te
-                            encuentres.</p>
+                        <p class="light" th:text="#{features.learn.desc}">...</p>
                     </div>
                 </div>
 
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center teal-text text-lighten-2"><i class="material-icons">group</i></h2>
-                        <h5 class="center">Una comunidad con la que puedes contar</h5>
+                        <h5 class="center" th:text="#{features.community.title}">A community you can count on</h5>
 
-                        <p class="light">Se parte de una gran comunidad de personas que, al igual que tú, buscan mejorar
-                            sus
-                            competencias y adquirir conocimientos constantemente para este mundo en constante
-                            evolución.</p>
+                        <p class="light" th:text="#{features.community.desc}">...</p>
                     </div>
                 </div>
 
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center teal-text text-lighten-2"><i class="material-icons">local_atm</i></h2>
-                        <h5 class="center">Precios al alcance de todos</h5>
+                        <h5 class="center" th:text="#{features.pricing.title}">Affordable Pricing</h5>
 
-                        <p class="light">Ya que nos enfocamos en que el conocimiento debe ser impartido en igualdad de
-                            condiciones,
-                            nos comprometemos brindandote educación de calidad a precios muy accesibles.</p>
+                        <p class="light" th:text="#{features.pricing.desc}">...</p>
                     </div>
                 </div>
             </div>
@@ -75,7 +67,7 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <div class="row center">
-                    <h5 class="header col s12 light">Una moderna escuela de formación profesional en tecnología.</h5>
+                    <h5 class="header col s12 light" th:text="#{school.subtitle}">...</h5>
                 </div>
             </div>
         </div>
@@ -87,15 +79,14 @@
 
             <div class="row">
                 <div class="col s12 center">
-                    <h4>Contáctanos</h4>
-                    <p class="left-align light">Somos una plataforma que se interesa por el aprendizaje de todas las
-                        personas, pues
-                        creemos en la importancia de brindar contenido de calidad para todo el público interesado, con
-                        el propósito de
-                        formar grandes profesionales y personas que sean líderes en este campo. <br><br>
-                        Cualquier duda o consulta que tengas nos la puedes comunicar al correo <a
-                                href="mailto:contact@donnatto.tech" class="teal-text">contact@donnatto.tech</a>,
-                        la cual estaremos resolviendo a la brevedad.</p>
+                    <h4 th:text="#{contact.title}">Contact us</h4>
+                    <p class="left-align light">
+                        <span th:text="#{contact.desc.part1}"></span>
+                        <br><br>
+                        <span th:text="#{contact.desc.part2}"></span>
+                        <a href="mailto:contact@donnatto.tech" class="teal-text">contact@donnatto.tech</a>,
+                        <span th:text="#{contact.desc.part3}"></span>
+                    </p>
                 </div>
             </div>
 
@@ -106,8 +97,7 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <div class="row center">
-                    <h5 class="header col s12 light">Únete a nosotros y se parte de esta gran revolución
-                        tecnológica.</h5>
+                    <h5 class="header col s12 light" th:text="#{join.message}">...</h5>
                 </div>
             </div>
         </div>
